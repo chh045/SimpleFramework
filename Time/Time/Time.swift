@@ -42,7 +42,7 @@ extension Time: CustomStringConvertible {
 }
 
 extension Time {
-    static func -= (lhs: inout Time, rhs: Int) {
-        lhs.counts -= rhs
-    }
+//    static func -= (lhs: inout Time, rhs: Int) {
+//        lhs.counts -= rhs
+//    }
 }
