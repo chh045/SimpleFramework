@@ -1,0 +1,7 @@
+version: "Apple Swift version 4.0.3 (swiftlang-900.0.74.1 clang-900.0.39.2)"
+options: "8af0916b26b71236a0c9a953a5229531"
+build_time: [1524615055, 173372000]
+inputs:
+  "/Users/tonaci/Desktop/Framework/ByteSequence/ByteSequence/ViewController.swift": [9223372036, 854775807]
+  "/Users/tonaci/Desktop/Framework/ByteSequence/ByteSequence/AppDelegate.swift": [9223372036, 854775807]
+  "/Users/tonaci/Desktop/Framework/ByteSequence/ByteSequence/ByteSequence.swift": [9223372036, 854775807]

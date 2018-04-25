@@ -1,0 +1,26 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/tonaci/Desktop/Framework/ByteSequence/ByteSequence/ByteSequence.swift",
+      "line": null,
+      "symbol": "ByteSequence",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tonaci/Desktop/Framework/ByteSequence/ByteSequence/ByteSequence.swift",
+      "line": 11,
+      "symbol": "ByteSequence",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tonaci/Desktop/Framework/ByteSequence/ByteSequence/ByteSequence.swift",
+      "line": 37,
+      "symbol": "ByteSequence.init(buffer:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/tonaci/Desktop/Framework/ByteSequence"
+}

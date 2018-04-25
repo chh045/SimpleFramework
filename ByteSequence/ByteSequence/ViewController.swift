@@ -17,8 +17,10 @@ class ViewController: UIViewController {
         print(buffer)
     }
 
+    ///
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
 }

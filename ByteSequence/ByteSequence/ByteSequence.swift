@@ -13,14 +13,21 @@ public struct ByteSequence {
 
     private var buffer: Buffer
 
+    /// ByteSequence default initializer, instantiate an empty buffer
     public init() {
         buffer = Buffer()
     }
 
+    /// ByteSequence initializer, create a instance of the given sequence copy
+    ///
+    /// - Parameter sequence: The sequence to be copied
     public init(sequence: ByteSequence) {
         buffer = sequence.buffer
     }
-
+    
+    /// ByteSequence initializer, copy the given buffer to a new instance
+    ///
+    /// - Parameter buffer: Buffer to be parsed
     public init(buffer: Buffer) {
         self.buffer = buffer
     }
