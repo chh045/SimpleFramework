@@ -7,7 +7,7 @@
 //
 
 import Foundation
-protocol ConnectionInfo {
-    var senderIP: String {set get}
-    var senderPort: UInt16 {set get}
+public struct ConnectionInfo {
+    var ip: String
+    var port: UInt16
 }

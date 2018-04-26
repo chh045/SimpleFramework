@@ -8,6 +8,11 @@
 
 import Foundation
 
+public enum PacketType: String {
+    case video = "video"
+    case audio = "audio"
+}
+
 public struct MediaPacket {
     
     var type: PacketType
@@ -22,19 +27,11 @@ public struct MediaPacket {
         self.data = message.data
     }
     
-    init(type: PacketType) {
-        self.type = type
-        self.data = ByteSequence()
-    }
-    
-    init(type: PacketType, data: ByteSequence) {
+    init(type: PacketType, data: ByteSequence = ByteSequence()) {
         self.type = type
         self.data = data
     }
-
-    /// Convert to network message
-    ///
-    /// - Returns: The message
+    
     var message: Message {
         return Message(type: type, data: data)
     }
@@ -42,20 +39,19 @@ public struct MediaPacket {
 
 
 public struct MediaPacketList {
-    public typealias PacketList = [MediaPacket]
     
-    private var list: PacketList
+    private var list: [MediaPacket]
     
     public init() {
-        list = PacketList()
+        list = [MediaPacket]()
     }
 }
 
 extension MediaPacketList: RangeReplaceableCollection {
-    public typealias Index = PacketList.Index
-    public typealias Element = PacketList.Element
+    public typealias Index = Int
+    public typealias Element = MediaPacket
     
-    public mutating func replaceSubrange<C, R>(_ subrange: R, with newElements: C) where C: Collection, R: RangeExpression, PacketList.Element == C.Element, PacketList.Index == R.Bound {
+    public mutating func replaceSubrange<C, R>(_ subrange: R, with newElements: C) where C: Collection, R: RangeExpression, Element == C.Element, Index == R.Bound {
         list.replaceSubrange(subrange, with: newElements)
     }
     

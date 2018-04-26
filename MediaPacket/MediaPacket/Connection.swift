@@ -7,7 +7,7 @@
 //
 
 import Foundation
-protocol ConnectionProtocol {
+protocol Connection: class {
     /// Connect to remote interface
     ///
     /// - Parameter async: The asynchronous

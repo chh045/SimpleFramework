@@ -12,9 +12,14 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        print("I got load")
         var buffer = ByteSequence()
         buffer.append(8)
         print(buffer)
+        
+        let seq = ByteSequence(count: 7)
+        let set = seq.partition(by: 3)
+        print(set)
     }
 
     ///
@@ -22,5 +27,6 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
     
 }

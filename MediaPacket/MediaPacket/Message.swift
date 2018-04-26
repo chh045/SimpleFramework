@@ -8,20 +8,14 @@
 
 import Foundation
 
-public enum PacketType: String {
-    case video = "video"
-    case audio = "audio"
-}
-
 public struct Message {
     var type: PacketType
     var data: ByteSequence
-    var info: ConnectionInfo?
+    var info: ConnectionInfo? = nil
     
     init(type: PacketType, data: ByteSequence) {
         self.type = type
         self.data = data
-        self.info = nil
     }
     
     init(message: Message) {
