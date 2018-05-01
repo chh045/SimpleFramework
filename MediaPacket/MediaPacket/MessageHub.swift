@@ -9,9 +9,6 @@
 import Foundation
 public struct MessageHub: MessageListener {
     
-    private var connection: Connection
-    
-    
     /// Reset network with new connection
     ///
     /// - Parameter new: The new connection

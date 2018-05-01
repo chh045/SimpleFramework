@@ -7,6 +7,21 @@
 //
 
 import Foundation
+
 protocol MediaReceiver: class {
-    func attachMessageHub()
+    
+    /// Attach a message hub to the sender
+    ///
+    /// - Parameter hub: The hub
+    func attach(messageHub: MessageHub)
+    
+    /// Detach message hub
+    func detach()
+    
+    /// Receive one unit. Decodes a media into the decoder's output
+    /// buffer if media is avaliable
+    func receiveOneUnit()
+    
+    /// Determines if media avaliable
+    func isMediaAvaliable()
 }
